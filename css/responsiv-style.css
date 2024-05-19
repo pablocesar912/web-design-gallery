@@ -1,0 +1,184 @@
+/* DISEÑO RESPONSIVE */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #47289d;
+}
+
+.container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 1140px;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 25%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+.gallery-wrap {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+}
+
+.item1 {
+  background-image: url(https://images.unsplash.com/photo-1587620931276-d97f425f62b9?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.item2 {
+  background-image: url(https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.item3 {
+  background-image: url(https://images.unsplash.com/photo-1619410283995-43d9134e7656?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.item4 {
+  background-image: url(https://images.unsplash.com/photo-1599507593362-50fa53ed1b40?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.item5 {
+  background-image: url(https://plus.unsplash.com/premium_photo-1678566111483-f45ad346d50a?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.item6 {
+  background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+
+/* Media Queries for Responsive Design */
+/* << PC >> */
+
+@media (min-width: 769px) {
+
+  h1 {
+    background-color: rgb(221, 135, 6);
+    margin-bottom: 5%;
+    border: solid;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.5s ease;
+    filter: blur(3px);
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .item:hover {
+    flex: 5;
+    filter: blur(0px);
+  }
+}
+
+
+/* << TABLET >> */
+
+@media (max-width: 768px) {
+
+  h1 {
+    background: black;
+    border: solid 5px white;
+  }
+
+  .container {
+    width: 90%;
+    /* Adjust container width for tablets */
+    padding: 75px 0;
+    margin: 0 auto;
+  }
+
+  .item {
+    height: 65%;
+    /* Adjust item height for tablets */
+    flex: 1 0 auto;
+    /* Remove flex grow and set a minimum height */
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: transform 0.7s ease;
+    filter: blur(5px);
+    border-radius: 15px;
+    width: 100%;
+    margin-top: -50px;
+    /* Reduce el margen superior a 10px */
+    margin-bottom: -50px;
+    /* Reduce el margen inferior a 10px */
+  }
+
+  .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .item:hover {
+    transform: translateY(-20%);
+    /* Slide image upwards on hover */
+    filter: blur(0px);
+  }
+}
+
+
+/* << MÓVIL >> */
+
+@media (max-width: 480px) {
+
+  h1 {
+    background: green;
+    border: solid 5px white;
+  }
+
+  .container {
+    width: 90%;
+    /* Make container full-width for mobile */
+  }
+
+  .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .item {
+    height: 45%;
+    /* Make items full-height for mobile */
+    flex: 1 0 auto;
+    /* Remove flex grow and set a minimum height */
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: transform 0.7s ease;
+    filter: blur(5px);
+    border-radius: 15px;
+    width: 100%;
+    margin-top: -50px;
+    /* Reduce el margen superior a 10px */
+    margin-bottom: -50px;
+    /* Reduce el margen inferior a 10px */
+  }
+
+  .item:hover {
+    transform: translateY(-20%);
+    /* Slide image upwards on hover */
+    filter: blur(0px);
+  }
+}
